@@ -1,11 +1,22 @@
-nome = input("Nome do aluno: ")
-nota1 = float(input("Digite a primeira nota: "))
-nota2 = float(input("Digite a segunda nota: "))
-media = (nota1 + nota2 / 2)
-print ("a sua media : ", media)
-if media >= 7:
-    print("o aluno esta aprovado")
-else:
-    print("o aluno esta reprovado")
+contador = 1
+soma_notas = 0
+while contador <= 4:
+    nota = float(input(f"digite a nota do { contador } bimestre"))
+    if nota < 0 or nota > 10:
+        print("nota invalida. A nota deve estar entre 0 e 10")
+        continue
+    contador += 1 
+    soma_notas += nota
 
-    
+media = soma_notas / 4
+print("a media de nota é: ", media)
+
+if media >=7:
+    print("o aluno esta aprovado")
+if media >= 5:
+    print("o aluno esta em recuperação")
+else:
+    print("o aluno esta aprovado")
+
+
+
